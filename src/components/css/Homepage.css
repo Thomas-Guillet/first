@@ -1,0 +1,11 @@
+.homepage__container{
+  width: 100vw;
+  height: 200vh;
+}
+.homepage__head{
+  width: 100%;
+  margin-top: -100px;
+  height: 200px;
+  background-color: #DBB756;
+  transform: skew(0deg,5deg);
+}

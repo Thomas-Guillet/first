@@ -1,0 +1,27 @@
+.landing__container{
+  height: 100vh;
+  width: 100vw;
+  background-color: #DBB756;
+}
+.landing__container > div.landing__img{
+  background-color: white;
+  height: 50vh;
+  width: 50vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  overflow: hidden;
+}
+.landing__container > div.landing__img > img{
+  position: relative;
+  height: 100%;
+  min-width: 100%
+}
+.landing__container > div.landing__line{
+  width: 100vw;
+  height: 1px;
+  background: white;
+  top: 50%;
+  position: absolute;
+}

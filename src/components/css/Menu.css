@@ -1,0 +1,28 @@
+.menu__top{
+  position: fixed;
+  top: 3vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 21px;
+  white-space:nowrap;
+  z-index: 100;
+}
+.menu__bottom{
+  position: absolute;
+  bottom: 6vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 21px;
+  white-space:nowrap;
+  z-index: 100;
+}
+.left{
+  position: absolute;
+  left: 3vw;
+}
+.right{
+  position: absolute;
+  right: -97vw;
+}
