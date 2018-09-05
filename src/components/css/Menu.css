@@ -6,7 +6,13 @@
   font-weight: 600;
   font-size: 21px;
   white-space:nowrap;
-  z-index: 100;
+  width: 100%;
+}
+.menu__top > svg{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10vh;
 }
 .menu__bottom{
   position: absolute;
@@ -17,12 +23,14 @@
   font-size: 21px;
   white-space:nowrap;
   z-index: 100;
+  width: 100%;
 }
+
 .left{
   position: absolute;
   left: 3vw;
 }
 .right{
   position: absolute;
-  right: -97vw;
+  right: 3vw;
 }
