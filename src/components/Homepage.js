@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/Homepage.css';
+import piano from '../assets/img/piano.jpg';
 import { Parallax } from 'react-scroll-parallax';
 
 export default class Homepage extends Component {
@@ -56,14 +57,26 @@ export default class Homepage extends Component {
         <div ref={el => this.head = el} className={this.state.homepage__head}></div>
         <div className={this.state.homepage__head_1}></div>
         <div className="homepage__content">
-
           <Parallax
-          offsetYMax={575}
-          offsetYMin={-375}
-          slowerScrollRate
+          offsetYMax={200}
+          offsetYMin={-200}
+          slowerScrollRate={500}
           >
-            <img src="https://via.placeholder.com/350x150" />
+            <img height="300" src={piano} />
           </Parallax>
+          <Parallax
+          className="homepage__content_text"
+          offsetYMax={400}
+          offsetYMin={-400 }
+          slowerScrollRate
+          tag="div"
+          >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In purus risus, rutrum et odio egestas, aliquet mattis metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse et nunc at odio semper venenatis ac sed eros. Maecenas pellentesque tincidunt dui non rhoncus. Donec cursus malesuada pharetra. Cras tincidunt faucibus scelerisque. Vestibulum mi ex, porta et velit a, vulputate pharetra ante. In hac habitasse platea dictumst. Mauris nec ultrices magna, ut faucibus libero. Nullam non leo quis ante porttitor tempor.
+
+            Donec et nulla rutrum, convallis elit sed, rutrum lacus. Sed non erat eu lorem condimentum volutpat hendrerit non felis. Sed ac tortor sem. Morbi vestibulum magna eu felis faucibus suscipit. Proin auctor ligula arcu, at porttitor mauris feugiat non. Praesent quis ornare purus. Nulla quam odio, laoreet eu dui eu, pellentesque consequat dui. Morbi quis enim ut arcu aliquet semper quis id nulla. Donec vel pellentesque enim, in pretium mauris. Mauris porta fringilla justo eget finibus. Cras non augue a ante porta maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque dignissim in orci a dictum. Vivamus tellus velit, accumsan in ligula vitae, ullamcorper dignissim justo. Duis scelerisque congue nunc, nec gravida elit tincidunt et. Cras sem nibh, vehicula et nibh vel, malesuada finibus neque.
+
+            Nulla posuere neque non dictum ultricies. Donec venenatis in neque eget maximus. Etiam placerat orci leo, at condimentum metus suscipit sit amet. Sed pulvinar turpis vitae augue convallis semper. Aliquam ut nunc ante. Nulla dui orci, lobortis ac libero porta, mollis posuere justo. In consequat finibus neque, nec consequat turpis bibendum eget. Integer sagittis eget justo fringilla convallis. Mauris eget finibus leo.
+            </Parallax>
         </div>
         <div className="homepage__head_2" className={this.state.homepage__head_2}></div>
         <div className="homepage__head_3" className={this.state.homepage__head_3}></div>
