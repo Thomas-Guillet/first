@@ -1,15 +1,44 @@
 import React, { Component } from 'react';
 import './css/Landing.css';
+import { Parallax } from 'react-scroll-parallax';
 
 export default class Landing extends Component {
+  state = {
+    transform: 0,
+    landing__line: 'landing__line',
+    landing__text: 'landing__text',
+  }
+
+  componentDidMount = () => {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = event => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    console.log(scrollTop);
+
+    let landing__line = this.state.transform >= 500 ? 'landing__line hidden' : 'landing__line';
+    let landing__text = this.state.transform >= 500 ? 'landing__text hidden' : 'landing__text';
+
+    this.setState({
+      transform: scrollTop,
+      landing__line: landing__line,
+      landing__text: landing__text,
+    });
+  }
+
   render() {
     const sentence = 'What a story Mark !';
     return (
-      <div class="landing__container">
-        <div class="landing__line"></div>
-        <div class="landing__img">
+      <div className="landing__container">
+        <div className={this.state.landing__line}></div>
+        <div className="landing__img">
           <svg width="1000" height="541" viewBox="0 0 1000 541" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0)">
+          <g clipPath="url(#clip0)">
           <rect width="1000" height="541" fill="#1B1A18"/>
           <line y1="10.5" x2="1000" y2="10.5" stroke="white"/>
           <line y1="20.5" x2="1000" y2="20.5" stroke="white"/>
@@ -73,13 +102,20 @@ export default class Landing extends Component {
           </clipPath>
           </defs>
           </svg>
-          <div class="landing__text">
+          <Parallax
+          className="landing__text_1"
+          offsetYMax={160}
+          offsetYMin={-160}
+          slowerScrollRate
+          tag="div"
+          >
             {sentence}
-          </div>
+          </Parallax>
         </div>
-        <div class="landing__text">
+        <div className={this.state.landing__text}>
           {sentence}
         </div>
+            lol
       </div>
     );
   }
