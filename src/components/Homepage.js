@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/Homepage.css';
 import piano from '../assets/img/piano.jpg';
 import { Parallax } from 'react-scroll-parallax';
+import ItemProject from './ItemProject.js';
 
 export default class Homepage extends Component {
 
@@ -14,25 +15,35 @@ export default class Homepage extends Component {
     homepage__head_1: 'homepage__head_1',
     homepage__head_2: null,
     homepage__head_3: null,
+    x: 0,
+    y: 0
   }
 
   componentDidMount = () => {
     window.addEventListener('scroll', this.handleScroll);
-    this.setState({ obj_head: this.head.getBoundingClientRect().y + 170 + (window.pageYOffset || document.documentElement.scrollTop) });
+    window.addEventListener('mousemove', this.handleMouseMove);
+    this.setState({
+      obj_head: this.head.getBoundingClientRect().y + 170 + (window.pageYOffset || document.documentElement.scrollTop),
+      obj_head_2: this.head2.getBoundingClientRect().y + 170 + (window.pageYOffset || document.documentElement.scrollTop)
+    });
   }
 
   componentWillUnmount = () => {
     window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('mousemove', this.handleMouseMove);
+  }
+
+
+  handleMouseMove = event => {
+    this.setState({ x: event.clientX, y: event.clientY });
   }
 
   handleScroll = event => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let head = this.state.transform <= this.state.obj_head ? 'homepage__head' : 'homepage__head active';
     let head1 = this.state.transform <= this.state.obj_head ? 'homepage__head_1' : 'homepage__head_1 active';
-    let head2 = this.state.transform >= 2000 ? 'homepage__head_2 active' : 'homepage__head_2';
-    let head3 = this.state.transform >= 2000 ? 'homepage__head_3 active' : 'homepage__head_3';
-
-    console.log(this.state.obj_head);
+    let head2 = this.state.transform >= this.state.obj_head_2 ? 'homepage__head_2 active' : 'homepage__head_2';
+    let head3 = this.state.transform >= this.state.obj_head_2 ? 'homepage__head_3 active' : 'homepage__head_3';
 
     this.setState({
       transform: scrollTop,
@@ -78,8 +89,25 @@ export default class Homepage extends Component {
             Nulla posuere neque non dictum ultricies. Donec venenatis in neque eget maximus. Etiam placerat orci leo, at condimentum metus suscipit sit amet. Sed pulvinar turpis vitae augue convallis semper. Aliquam ut nunc ante. Nulla dui orci, lobortis ac libero porta, mollis posuere justo. In consequat finibus neque, nec consequat turpis bibendum eget. Integer sagittis eget justo fringilla convallis. Mauris eget finibus leo.
             </Parallax>
         </div>
-        <div className="homepage__head_2" className={this.state.homepage__head_2}></div>
+        <div ref={el2 => this.head2 = el2} className="homepage__head_2" className={this.state.homepage__head_2}></div>
         <div className="homepage__head_3" className={this.state.homepage__head_3}></div>
+        <div className="homepage__content">
+          <Parallax
+          className="homepage__project"
+          offsetYMax={250}
+          offsetYMin={-200 }
+          slowerScrollRate
+          tag="div"
+          >
+            <ItemProject title="beau titre" />
+            <ItemProject title="Woaw" />
+            <ItemProject title="c bo" />
+            <ItemProject title="ok." />
+            <ItemProject title="beau titre" />
+            <ItemProject title="héhée" />
+            <ItemProject title="beau titre" />
+          </Parallax>
+        </div>
         <div className="homepage__block_3"></div>
         <div className="homepage__block_4"></div>
         <div className="homepage__content">

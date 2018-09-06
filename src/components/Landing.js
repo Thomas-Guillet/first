@@ -11,6 +11,13 @@ export default class Landing extends Component {
 
   componentDidMount = () => {
     window.addEventListener('scroll', this.handleScroll);
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let landing__text = scrollTop >= 500 ? 'landing__text hidden' : 'landing__text';
+    console.log(landing__text);
+    this.setState({
+      landing__text: landing__text,
+    });
+    console.log(this.state);
   }
 
   componentWillUnmount = () => {
@@ -19,7 +26,6 @@ export default class Landing extends Component {
 
   handleScroll = event => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    console.log(scrollTop);
 
     let landing__line = this.state.transform >= 500 ? 'landing__line hidden' : 'landing__line';
     let landing__text = this.state.transform >= 500 ? 'landing__text hidden' : 'landing__text';

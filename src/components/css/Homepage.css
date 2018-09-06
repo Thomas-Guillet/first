@@ -1,7 +1,6 @@
 .homepage__container{
   width: 100vw;
   height: auto;
-  z-index: 20;
 }
 .homepage__container > svg{
   position: fixed;
@@ -50,12 +49,13 @@
 }
 .homepage__content{
   width: 100%;
-  height: 930px;
+  height: auto;
   background: #ececec;
   margin-bottom: -30px;
   position: relative;
-  z-index: -1;
   overflow: hidden;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .homepage__content > .title{
   color: black;
@@ -79,15 +79,16 @@
   background-color: #5A816E;
   width: 100%;
   height: 200px;
+  margin-top: -30px;
   transform: skew(0deg,-2deg);
-  position: relative;
-  transition: .5s;
+  position: absolute;
 }
 .homepage__head_2.active{
   z-index: 29;
   background-color: #5A816E;
   width: 100%;
   height: 200px;
+  margin-top: 0px;
   transform: skew(0deg,-2deg);
   position: fixed;
   top: -200px;
@@ -96,17 +97,16 @@
   z-index: 29;
   background-color: #739A88;
   width: 100%;
-  margin-top: -150px;
   height: 100px;
   transform: skew(0deg,-10deg);
-  position: relative;
-  transition: .5s;
+  position: absolute;
 }
 .homepage__head_3.active{
   z-index: 29;
   background-color: #739A88;
   width: 100%;
   height: 100px;
+  margin-top: -170px;
   transform: skew(0deg,-10deg);
   position: fixed;
   top: 0;
@@ -116,7 +116,6 @@
   z-index: 30;
   background-color: #675B43;
   width: 100%;
-  margin-top: 800px;
   height: 100px;
   transform: skew(0deg,5deg);
 }
@@ -133,4 +132,47 @@
   margin: 0px 10vw;
   line-height: 1.5;
   font-size: 18px;
+}
+.homepage__project{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1000px;
+  margin-bottom: 1000px;
+  width: 90vw;
+  text-align: center;
+}
+.homepage__project .item{
+  background: pink;
+  width: 25vw;
+  height: 25vw;
+  display: inline-block;
+  margin-left: 10vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10vw;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.homepage__project .item > .hoverText{
+  position: absolute;
+  color: white;
+  opacity: 0;
+  font-weight: bold;
+  font-size: 22px;
+}
+.homepage__project .item:hover > .hoverText{
+  opacity: 1;
+}
+.homepage__project .item > .black{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0);
+  transition: .1s;
+}
+.homepage__project .item:hover > .black{
+  background: rgba(0,0,0,.7);
 }
