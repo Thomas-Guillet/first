@@ -3,11 +3,14 @@ import './css/Homepage.css';
 import piano from '../assets/img/piano.jpg';
 import { Parallax } from 'react-scroll-parallax';
 import ItemProject from './ItemProject.js';
+import BackgroundDating from '../assets/img/back-projet-dating.png';
+import BackgroundJazz from '../assets/img/back-projet-jazz.png';
+import BackgroundGaby from '../assets/img/back-projet-gaby.png';
+import BackgroundPanier from '../assets/img/back-projet-panier.png';
+import BackgroundTeester from '../assets/img/back-projet-teester.png';
+import BackgroundUprigs from '../assets/img/back-projet-uprigs.png';
 
 export default class Homepage extends Component {
-
-
-
   state = {
     transform: 0,
     obj_head: null,
@@ -71,7 +74,7 @@ export default class Homepage extends Component {
           <Parallax
           offsetYMax={200}
           offsetYMin={-200}
-          slowerScrollRate={500}
+          slowerScrollRate
           >
             <img height="300" src={piano} />
           </Parallax>
@@ -94,25 +97,21 @@ export default class Homepage extends Component {
         <div className="homepage__content">
           <Parallax
           className="homepage__project"
-          offsetYMax={250}
-          offsetYMin={-200 }
+          offsetYMax={300}
+          offsetYMin={-300 }
           slowerScrollRate
           tag="div"
           >
-            <ItemProject title="beau titre" />
-            <ItemProject title="Woaw" />
-            <ItemProject title="c bo" />
-            <ItemProject title="ok." />
-            <ItemProject title="beau titre" />
-            <ItemProject title="héhée" />
-            <ItemProject title="beau titre" />
+            <ItemProject title="Dating" linkProject="/projet-dating" imgSrc={BackgroundDating} />
+            <ItemProject title="Jazz Isn't Dying" linkProject="/projet-jazz" imgSrc={BackgroundJazz} />
+            <ItemProject title="Gaby" linkProject="/projet-gaby" imgSrc={BackgroundGaby} />
+            <ItemProject title="Le panier Nantais" linkProject="/projet-panier" imgSrc={BackgroundPanier} />
+            <ItemProject title="Teester" linkProject="/projet-teester" imgSrc={BackgroundTeester} />
+            <ItemProject title="Uprigs" linkProject="/projet-uprigs" imgSrc={BackgroundUprigs} />
           </Parallax>
         </div>
-        <div className="homepage__block_3"></div>
         <div className="homepage__block_4"></div>
-        <div className="homepage__content">
-
-        </div>
+        <div className="homepage__block_3"></div>
       </div>
     );
   }

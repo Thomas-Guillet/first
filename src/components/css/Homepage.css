@@ -54,8 +54,8 @@
   margin-bottom: -30px;
   position: relative;
   overflow: hidden;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 350px;
+  padding-bottom: 150px;
 }
 .homepage__content > .title{
   color: black;
@@ -116,14 +116,14 @@
   z-index: 30;
   background-color: #675B43;
   width: 100%;
-  height: 100px;
-  transform: skew(0deg,5deg);
+      margin-top: -40px;
+  height: 800px;
 }
 .homepage__block_4{
   z-index: 30;
   background-color: #E6D0A1;
   width: 100%;
-  margin-top: -150px;
+  margin-top: -70px;
   height: 110px;
   transform: skew(0deg,3deg);
 }
@@ -138,7 +138,7 @@
   margin-right: auto;
   margin-top: 1000px;
   margin-bottom: 1000px;
-  width: 90vw;
+  width: 80vw;
   text-align: center;
 }
 .homepage__project .item{
@@ -146,20 +146,23 @@
   width: 25vw;
   height: 25vw;
   display: inline-block;
-  margin-left: 10vw;
+  margin-left: 5vw;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-right: 10vw;
+  margin-right: 5vw;
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  background-image: url('https://wallpapersultra.net/wp-content/uploads/4K-Wallpaper-Full-HD-For-Computer-Screens.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .homepage__project .item > .hoverText{
   position: absolute;
   color: white;
+  font-family: 'typewcond_regular', serif;
   opacity: 0;
-  font-weight: bold;
-  font-size: 22px;
+  font-size: 45px;
 }
 .homepage__project .item:hover > .hoverText{
   opacity: 1;

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "typewcond_regular";
+  src: url("../assets/font/typewcond_regular.otf");
+}
+
 body {
   margin: 0;
   padding: 0;
