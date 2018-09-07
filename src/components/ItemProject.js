@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './css/Homepage.css';
 
+// Aperçu d'un projet + redirection
 export default class ItemProject extends Component {
 
   state = {

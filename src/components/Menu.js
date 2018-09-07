@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import './css/Menu.css';
 
+
+// Menu (logo + nav)
 export default class Menu extends Component {
 
   state = {

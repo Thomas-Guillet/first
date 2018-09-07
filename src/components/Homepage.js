@@ -10,6 +10,7 @@ import BackgroundPanier from '../assets/img/back-projet-panier.png';
 import BackgroundTeester from '../assets/img/back-projet-teester.png';
 import BackgroundUprigs from '../assets/img/back-projet-uprigs.png';
 
+// Contenu de la page principale
 export default class Homepage extends Component {
   state = {
     transform: 0,
@@ -59,7 +60,6 @@ export default class Homepage extends Component {
 
 
   render() {
-
     return (
       <div className="homepage__container">
         <svg width="272" height="305" viewBox="0 0 272 305" fill="#1B1A18" xmlns="http://www.w3.org/2000/svg">

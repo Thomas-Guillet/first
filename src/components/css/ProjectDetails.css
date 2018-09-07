@@ -46,3 +46,10 @@
   background: #57bf8f;
   border-top: 30px solid #32865f;
 }
+.projectDetails__panel > .projectDetails__triangle{
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 30px solid blue;
+}

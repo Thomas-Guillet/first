@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './css/ProjectDetails.css';
 
+// Page de présentation d'un projet
 export default class ProjectDetails extends Component {
 
   componentDidMount() {
@@ -20,6 +21,8 @@ export default class ProjectDetails extends Component {
           </div>
         </div>
         <div className="projectDetails__panel">
+          <div className="projectDetails__triangle">
+          </div>
           <div className="projectDetails__head">
           </div>
         </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/Landing.css';
 import { Parallax } from 'react-scroll-parallax';
 
+// Entête d'accueil
 export default class Landing extends Component {
   state = {
     transform: 0,
