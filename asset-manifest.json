@@ -1,7 +1,14 @@
 {
-  "main.css": "static/css/main.f2d4153c.css",
-  "main.css.map": "static/css/main.f2d4153c.css.map",
-  "main.js": "static/js/main.fc8aa563.js",
-  "main.js.map": "static/js/main.fc8aa563.js.map",
-  "static\\media\\piano.jpg": "static/media/piano.69135aa9.jpg"
+  "main.css": "static/css/main.191ad795.css",
+  "main.css.map": "static/css/main.191ad795.css.map",
+  "main.js": "static/js/main.80cf2e94.js",
+  "main.js.map": "static/js/main.80cf2e94.js.map",
+  "static\\media\\back-projet-dating.png": "static/media/back-projet-dating.aae6ffcf.png",
+  "static\\media\\back-projet-gaby.png": "static/media/back-projet-gaby.aa997a39.png",
+  "static\\media\\back-projet-jazz.png": "static/media/back-projet-jazz.c1d32cb6.png",
+  "static\\media\\back-projet-panier.png": "static/media/back-projet-panier.d45ae444.png",
+  "static\\media\\back-projet-teester.png": "static/media/back-projet-teester.27fa391c.png",
+  "static\\media\\back-projet-uprigs.png": "static/media/back-projet-uprigs.d5c798bd.png",
+  "static\\media\\piano.jpg": "static/media/piano.69135aa9.jpg",
+  "static\\media\\typewcond_regular.otf": "static/media/typewcond_regular.6247b859.otf"
 }
